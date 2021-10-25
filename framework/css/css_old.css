@@ -1,0 +1,58 @@
+/* 
+reset css
+tailles, marges, padding, link
+*/
+
+html{ /* sélecteur propriété valeur */
+    font-size: 62.5%;  /* 1.000rem root em 10px */
+}
+body{
+    font: 3.5rem sans-serif; /* 16px */
+    margin: 0;  
+}
+h1,h2,h3,h4,p,ol,ul,figure,dd{
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4{
+    font-weight: normal;
+}
+a{
+    text-decoration-style: none;
+    color: #000;
+}
+*{
+    box-sizing: border-box;
+}
+/* theme */
+/* Palette graphique */
+:root{
+    --main-color: #d1d1d2;
+    --bg-header-primary: #fff;
+    --bg-header-secondary: #3d3838;
+}
+main{
+    background-color: var(--main-color);
+}
+header, main, footer{
+    max-width: 80rem;
+    /*border: solid 1px black;*/
+    margin: 0rem auto 0rem;
+}
+header{
+    padding: 1rem;
+}
+body nav ol, nav h2, section h2, section p{
+    padding: 2.5rem;
+    box-shadow: 0rem .1rem 0 rgb(0, 0, 0);
+    line-height: 1.6rem;
+}
+nav ol, nav h2{
+    background-color: var(--);
+}
+section div img{
+    width: 100%;
+}
+footer{
+    text-align: center;
+}

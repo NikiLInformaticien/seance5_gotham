@@ -1,43 +1,111 @@
-/* 
-reset css
-tailles, marges, padding, link
-*/
+/*rest */
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    background:url(https://cdn.pocket-lint.com/r/s/1200x/assets/images/149433-tv-feature-what-order-should-you-watch-the-batman-movies-and-shows-image1-gyquc3whrm.jpg) no-repeat fixed center center /cover;
+}
 
-html{ /* sélecteur propriété valeur */
-    font-size: 62.5%;  /* 1.000rem root em 10px */
-}
 body{
-    font: 1.6rem sans-serif; /* 16px */
-    margin: 0;  
+    font: 1.6rem sans-serif;
+    margin: 0;
 }
-h1,h2,h3,h4,p,ol,ul,figure,dd{
+
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,p,figure,ol,ul{
     margin: 0;
     padding: 0;
-    list-style-type: none;
 }
-h1,h2,h3,h4{
+
+h1,h2,h3{
     font-weight: normal;
 }
+
 a{
-    text-decoration-style: none;
+    text-decoration: none;
     color: #000;
 }
-/* theme */
-/* Palette graphique */
+
+/*thème */
 :root{
     --main-color: #d1d1d2;
-    --bg-header-primary: #fff;
+    --bg-header-primary: #ffffff;
     --bg-header-secondary: #3d3838;
-    --color-alert: #c0392b;
-    --color-success: #068a22;
-    --color-warning: rgba(253, 203, 110,1.0);
+
 }
+
 header, main, footer{
     max-width: 80rem;
-    border: solid 1px black;
-    margin: 0rem auto;
+    margin: 0 auto;
+    background-color: var(--main-color);
 }
+header{
+    padding: 1rem;
+    background-color: var(--main-color);
+}
+header h1:before{
+    content:'\01F3AC';
+    vertical-align: .3rem;
+}
+/*
+header{
+    margin: 0 auto;   /* casse le header qu'on a mis en haut pour mettre plus en haut le header 
+}*/
+main nav ol, nav h2, section h2, section p{
+    padding: 1rem;
+    line-height: 3.5rem;
+    
+}
+main nav ol{
+    line-height: 2.5rem;
+}
+
+main nav ol{
+    padding-left: 2.5rem;
+}
+main{
+    padding: 1rem;
+}
+main nav ol li a{
+    text-transform: capitalize;
+}
+
+main nav h2, main section h2{
+    position: sticky;  /*arrete l'entête histoire, géo et demo (le titre)*/
+    top: 0;
+    left: 0;
+    background-color: var(--bg-header-primary);
+    box-shadow: 0 .4rem 0 var(--bg-header-secondary);  /* box-shadow pour l'élément */
+    text-transform: capitalize;  /*Met en majuscule */
+    color: #fafafa;
+    text-shadow: .2rem .2rem 0 #333;  /*met le texte en ombrage un peu comme en 3d */
+    font-size: x-large; /*donne une taille standard au texte*/
+
+}
+
+main nav .focus:target, main section .focus:target{  /* lorsqu'on clic sur histo, géo ou démo, cela met le background en noir */
+        background-color: #000;
+} 
+main nav .focus, main section .focus{
+    transition: all 500ms ease-in-out;   /*fait la transition tout doucement */
+}
+
+main section p, footer p{
+    line-height: 2.6rem;
+}
+
+section div img{
+    display: block;
+    width: 100%;
+}
+/*
 footer{
-    margin-top: 3rem;
+    margin-top: 3.0rem;
+} */
+
+footer p {
     text-align: center;
+    text-transform :capitalize; /*met en majuscule */
 }
